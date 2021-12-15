@@ -1,0 +1,25 @@
+.slider-arrows
+    align-self: flex-end
+    display: flex
+    margin-bottom: 30px
+    @media screen and (max-width: 480px)
+        margin-top: 30px
+        margin-bottom: 0
+        align-self: center
+    &__arrow
+        box-sizing: border-box
+        border: 1px solid $blue
+        width: 40px
+        height: 40px
+        background-color: $blue
+        background-image: url('images/arrow-slider.svg')
+        background-position: center
+        background-repeat: no-repeat
+        &--reversed
+            transform: rotate(180deg)
+        &:hover
+            background-color: $gray
+            background-image: url('images/arrow-slider--blue.svg')
+            cursor: pointer
+    &__arrow:first-of-type
+        margin-right: 3px

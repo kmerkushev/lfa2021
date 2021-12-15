@@ -1,0 +1,37 @@
+doctype html
+html.page(lang="ru")
+    head
+        link(rel="stylesheet" type="text/css" href="style.css")
+        //-link(rel="stylesheet" type="text/css" href="stylesheets/vendor/slick.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(charset="utf-8")
+        meta(name="description" content="")
+        meta(property="og:title" content="Программа — ПМЮФ 2021. Петербургский Международный Юридический Форум")
+        meta(property="og:description" content="")
+        meta(property="og:image" content="images/socials-cover.jpg")
+        meta(property="og:locale" content="ru_RU")
+        meta(property="og:type" content="website")
+        meta(property="og:url" content="https://spblegalforum.ru/ru")
+        link(rel="icon" href="/favicon.ico")
+        link(rel="icon" href="/favicon.svg" type="image/svg+xml")
+        link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+        link(rel="manifest" href="/my.webmanifest")
+        meta(name="theme-color" content="#404959")
+        title
+            | Программа — Петербургский международный юридический форум 9¾
+    body.page__body.body
+        .body__overlay.overlay.visually-hidden
+        .body__overlay.overlay.overlay--transparent.visually-hidden
+        .body__gradient
+        include includes/header.pug
+        main.main
+            h1.main__h1
+                | Программа
+            section.main__program
+                include includes/schedule.pug
+        include includes/footer.pug
+               
+    script(type="text/javascript" src="js/script.js")
+    script(type="text/javascript" src="js/jquery-1.11.0.min.js")
+    script(type="text/javascript" src="js/jquery-migrate-1.2.1.min.js")
+    script(type="text/javascript" src="js/slick.min.js")

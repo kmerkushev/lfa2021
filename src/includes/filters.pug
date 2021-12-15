@@ -1,0 +1,126 @@
+section.main__filters.filters
+    form.filters__form(action="https://echo.htmlacademy.ru/courses" method="post")
+        fieldset.filters__tracks-wrapper
+            button.filters__tracks-show-button(type="button")
+                | Выбрать треки
+            ul.filters__tracks.visually-hidden
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="all")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | Все треки
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-1")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | Пленарное заседание
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-6")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 1. Smart-общество
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-7")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 2. Юридическая профессия
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-8")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 3. ESG. Инвестиции
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-9")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 4. Медицина. Фармацевтика
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-10")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 5. Разрешение споров. Судебная и арбитражная практика. Уголовное право
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-11")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 6. Международное право. Международное правосудие
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-12")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 7. Публичное право. Конституционное право
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-13")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 8. Культура. Образование. Спорт. Туризм
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-14")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 9. Частное право
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-16")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 10. Банкротство
+                li.filters__tracks-wrapper
+                    label.filters__tracks-label
+                        input.filters__track(type="checkbox" name="filters__track" value="track-type-17")
+                        span.filters__track-box
+                        span.filters__track-text
+                            | 11. Антимонопольное, налоговое и таможенное регулирование
+                li.filters__tracks-wrapper.filters__tracks-wrapper--center
+                    button.filters__tracks-btn.filters__tracks-btn--submit.visually-hidden
+                        | Применить
+                    button.filters__tracks-btn.filters__tracks-btn--close
+                        | Закрыть
+        //-label.filters__free-label
+            input.filters__free(type="checkbox" name="filters__free" value="true")
+            span.filters__free-box
+            span.filters__free-text
+                | Только бесплатные
+        fieldset.filters__dates-wrapper
+            ul.filters__dates
+                li.filters__date-wrapper        
+                    label.filters__date-label
+                        input.filters__date(type="radio" name="filters__date" value="all" checked)
+                        span.filters__date-text
+                            span.filters__date-text-big                                
+                                | Все дни
+                li.filters__date-wrapper        
+                    label.filters__date-label
+                        input.filters__date(type="radio" name="filters__date" value="18")
+                        span.filters__date-text
+                            span.filters__date-text-big                                
+                                | 20, чт
+                li.filters__date-wrapper        
+                    label.filters__date-label
+                        input.filters__date(type="radio" name="filters__date" value="19")
+                        span.filters__date-text
+                            span.filters__date-text-big                                
+                                | 21, пт
+                li.filters__date-wrapper        
+                    label.filters__date-label
+                        input.filters__date(type="radio" name="filters__date" value="20")
+                        span.filters__date-text
+                            span.filters__date-text-big                                
+                                | 22, сб
+                li.filters__date-wrapper        
+                    label.filters__date-label
+                        input.filters__date(type="radio" name="filters__date" value="21")
+                        span.filters__date-text
+                            span.filters__date-text-big                                
+                                | 23, вс

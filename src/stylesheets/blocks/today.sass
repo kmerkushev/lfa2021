@@ -1,0 +1,75 @@
+.today
+    font-family: $dinpro
+    position: relative
+    padding: 90px 20px 60px 20px
+    background-color: $gray
+    &__heading
+        font-size: 48px
+        line-height: 1.25
+        font-weight: 700
+        color: $white
+        text-align: center
+        text-transform: uppercase
+        margin-bottom: 75px
+        @media screen and (max-width: 960px)
+            margin-bottom: 40px
+        @media screen and (max-width: 480px)
+            font-size: 36px
+    &__events
+        display: flex
+        justify-content: space-between
+        @media screen and (max-width: 960px)
+            flex-wrap: wrap
+    &__event
+        margin-right: 15px
+        @media screen and (max-width: 960px)
+            max-width: 48%
+            margin-right: 0
+            margin-bottom: 45px
+        @media screen and (max-width: 580px)
+            max-width: none
+            margin-right: 0
+            margin-bottom: 45px
+    &__event:last-of-type
+        margin-right: 0
+        @media screen and (max-width: 580px)
+            margin-bottom: 0
+    &__link
+        display: inline-block
+        text-decoration: none
+        position: relative
+        background-color: $gray
+        padding: 23px 25px 55px 25px
+        border: 1px solid $gold        
+        transition: all 0.3s ease-out
+        &::after
+            content: ""
+            box-sizing: border-box
+            position: absolute
+            right: 20px
+            bottom: -20px
+            width: 40px
+            height: 40px
+            background-image: url('images/arrow--blue.svg')
+            background-color: $gray
+            background-repeat: no-repeat
+            border: 1px solid $blue
+            background-position: center
+            z-index: 99999
+            transition: all 0.3s ease-out
+        &:hover
+            border: 1px solid $white
+            text-decoration: none
+            &::after
+                background-color: $blue
+                background-image: url('images/arrow--gray.svg')
+    &__time
+        font-size: 24px
+        font-weight: 500
+        color: $gold
+        margin-bottom: 17px
+    &__description
+        font-size: 16px
+        line-height: 1.25
+        font-weight: 500
+        color: $white-blue

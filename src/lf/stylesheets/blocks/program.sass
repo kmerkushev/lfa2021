@@ -1,0 +1,27 @@
+.program
+    position: relative
+    font-family: $dinpro
+    background-color: $gray
+    padding-top: 55px
+    padding-bottom: 60px
+    @media screen and (max-width: 760px)
+        padding-top: 22px
+    & .schedule
+        margin-top: 0        
+        @media screen and (max-width: 480px)
+            padding-top: 0
+    
+    & .schedule__timeline-wrapper
+        max-height: initial
+        overflow: initial
+        @media screen and (max-width: 480px)
+            border-top: 1px solid #404959
+            max-height: 550px
+            overflow: auto
+            margin-top: 0
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+
+    & .hour__event:first-of-type
+        margin-top: 50px

@@ -1,0 +1,254 @@
+fieldset
+    padding: 0
+    margin: 0
+
+.filters
+    font-family: $dinpro
+
+    & *
+        transition: color 0.3s ease-out
+    
+    &__tracks-wrapper,
+    &__dates-wrapper
+        border: none
+    
+    &__form
+        display: flex
+        position: relative
+        justify-content: space-between
+        align-items: center
+        padding-left: 30px
+        @media screen and (max-width: 760px)
+            flex-direction: column
+        @media screen and (max-width: 660px)
+            padding-left: 0
+    &__tracks-wrapper
+        @media screen and (max-width: 760px)
+            order: 2
+            margin-top: 20px
+            margin-bottom: 18px
+            box-sizing: border-box
+
+
+    &__tracks-show-button
+        box-sizing: border-box
+        text-transform: uppercase
+        font-weight: 500
+        color: $white
+        border: 1px solid $gold
+        width: 265px
+        height: 32px        
+        padding-left: 50px
+        padding-right: 85px
+        background-color: $gray
+        background-image: url('images/arrow-dropdown.svg')
+        background-repeat: no-repeat
+        background-position-x: calc(100% - 50px)
+        background-position-y: center
+        @media screen and (max-width: 760px)
+            font-size: 14px
+            background-position-x: calc(100% - 55px)
+            max-width: 256px
+        &:hover
+            color: $gold
+            background-image: url('images/arrow-dropdown--gold.svg')
+        &--opened
+            background-image: url('images/arrow-dropdown--reversed.svg')
+            &:hover
+                background-image: url('images/arrow-dropdown--gold--reversed.svg')
+
+    &__tracks
+        position: absolute
+        top: 34px
+        left: 30px
+        background-color: $gray
+        border: 1px solid $gold
+        padding: 24px 0
+        max-width: 265px
+        z-index: 99999
+        @media screen and (max-width: 960px)
+            top: 41px
+        @media screen and (max-width: 760px)
+            top: 103px
+            left: initial
+            max-width: 256px
+            padding: 0
+
+    &__tracks-label
+        position: relative
+        padding-top: 11px
+        padding-bottom: 11px
+        padding-left: 37px
+        font-size: 14px
+        line-height: 1.25
+        color: $white-blue
+        cursor: pointer
+        width: 100%
+        @media screen and (max-width: 760px)
+            padding-top: 11px
+            padding-bottom: 0
+
+    &__track
+        position: absolute
+        width: 1px
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)
+
+    &__track + &__track-box
+        position: absolute
+        top: 13px
+        left: 10px
+        width: 14px
+        height: 14px
+        border: 1px solid $gold
+
+    &__track:checked + &__track-box
+        padding: 2px
+        &::after
+            content: ''
+            position: absolute
+            width: 8px
+            height: 8px
+            background-color: $gold
+    
+    &__track:checked + &__track-box + &__track-text
+        font-weight: 500
+
+    &__track-text
+        display: block
+        margin-right: 10px
+
+    &__tracks-label:hover &__track-text
+        font-weight: 500
+        
+
+
+    &__free-label
+        position: relative
+        display: flex
+        align-items: center
+        padding-left: 34px
+        height: 32px  
+        text-transform: uppercase
+        font-weight: 500
+        color: $white
+        &:hover
+            cursor: pointer
+            & .filters__free-text
+                color: $gold
+        @media screen and (max-width: 760px)
+            order: 3
+            font-size: 14px
+            padding-left: 52px
+
+    &__free
+        position: absolute
+        width: 1px
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)
+
+    &__free-box
+        position: absolute
+        left: 0
+        width: 24px
+        height: 14px
+        border: 1px solid $white
+        border-radius: 50px
+        @media screen and (max-width: 760px)
+            width: 43px
+            height: 24px
+        &::after
+            content: ''
+            position: absolute
+            width: 8px
+            height: 8px
+            top: 2px
+            left: 2px
+            border-radius: 50%
+            background-color: $white
+            transition: all 0.3s ease-out
+            @media screen and (max-width: 760px)
+                width: 14px
+                height: 14px
+                top: 4px
+                left: 4px
+
+    &__free-text
+        transition: all 0.3s ease-out
+
+    &__free:checked + &__free-box
+        border: 1px solid $gold
+        &::after
+            background-color: $gold
+            left: calc(100% - 8px - 2px)
+            @media screen and (max-width: 760px)
+                left: calc(100% - 8px - 10px)
+
+    &__free:checked + &__free-box + &__free-text
+        color: $gold
+        
+
+
+    &__dates-wrapper
+        @media screen and (max-width: 760px)
+            order: 1
+
+    &__dates
+        display: flex
+        justify-content: space-between
+
+    &__date-wrapper
+        margin-right: 29px
+        &:last-of-type
+            margin-right: 0
+        @media screen and (max-width: 1060px)
+            margin-right: 10px
+
+    &__date-label:hover
+        cursor: pointer
+    
+    &__date-label:hover &__date-text
+        color: $gold
+
+    &__date
+        position: absolute
+        width: 1px
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)
+    
+    &__date-text
+        font-size: 12px
+        font-weight: 500
+        line-height: 1.25
+        color: $white
+        text-transform: uppercase
+        padding: 5px
+        padding-bottom: 5px
+        @media screen and (max-width: 1000px)
+            display: flex
+            flex-direction: column
+            align-items: center
+            font-weight: 400
+            font-size: 12px
+        &-big
+            font-size: 30px
+            font-weight: 400
+            @media screen and (max-width: 1000px)
+                font-size: 22px                
+            &-space
+                font-size: 14px
+                @media screen and (max-width: 1000px)
+                    display: none
+        
+    &__date:checked + &__date-text
+        color: $blue
+        border-bottom: 2px solid $blue
+        @media screen and (max-width: 1000px)
+            border: none
+    
+    &__date:checked + &__date-text &__date-text-big
+        font-weight: 700
+

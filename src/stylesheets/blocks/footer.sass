@@ -1,0 +1,58 @@
+.footer
+  border-top: 5px solid $gold
+  padding-top: 69px
+  padding-bottom: 57px
+  background-color: rgba(64, 73, 89, 0.8)
+  @media screen and (max-width: 590px)
+    padding-top: 30px
+  &__kontainer
+    position: relative
+    display: flex
+    justify-content: space-between
+    @media screen and (max-width: 590px)
+      flex-direction: column-reverse
+  &__left
+    margin-right: 35px
+  &__logo
+    @media screen and (max-width: 590px)
+      position: absolute
+      top: 0
+  &__text
+    margin-top: 42px
+    max-width: 660px
+    font-size: 12px
+    line-height: 1.25
+    color: $white-blue
+    & a
+      color: $white-blue
+      text-decoration: none
+  &__right
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: 368px
+    @media screen and (max-width: 960px)
+      max-width: 300px
+    @media screen and (max-width: 590px)
+      max-width: 100%
+      margin-top: 55px
+  &__nav
+  &__element
+    margin-bottom: 20px
+    &:last-of-type
+      margin-bottom: 0
+  &__link
+    font-size: 16px
+    color: $gold
+    text-decoration: none
+    &:hover
+      color: $gold
+      text-decoration: underline
+  &__socials
+  &__social
+    width: 26px
+    height: 26px
+    background-color: $gold
+    background-repeat: no-repeat
+    background-position: center
+    border-radius: 50%

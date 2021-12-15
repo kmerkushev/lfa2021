@@ -1,0 +1,63 @@
+- var socials = ['facebook', 'telegram', 'instagram', 'youtube', 'twitter'];
+header.body__header.header.kontainer
+    .header__wrapper.header__wrapper--left
+        button.header__hamburger.hamburger.hamburger--open
+        a(href="#")
+            img.header__logo(src="images/logo.svg", alt="Петербургский международный юридический форум")
+    .header__wrapper.header__wrapper--center
+        nav.header__menu.menu
+            ul.menu__list.menu__list--hidden
+                li.menu__element.menu__element--search
+                    button.menu__button-show-search
+                    form.menu__search.search.search--closed(action="") 
+                        input.search__input(type="text" placeholder="Поиск")
+                        button.search__button-search(type="submit")
+                        button.search__button-close
+                li.menu__element
+                    a.menu__link(href="#")
+                        | Расписание
+                li.menu__element
+                    a.menu__link(href="#")
+                        | Спикеры
+                li.menu__element.menu__element--parent
+                    a.menu__link.menu__link--closed(href="#")
+                        | Партнеры
+                    ul.menu__inner
+                        li.menu__inner-element
+                            a.menu__inner-link(href="#")
+                                | Партнеры&nbsp;мероприятия
+                        li.menu__inner-element
+                            a.menu__inner-link(href="#")
+                                | Информационные&nbsp;партнеры
+                li.menu__element
+                    a.menu__link(href="#")
+                        | FAQ
+                li.menu__element
+                    a.menu__link(href="#")
+                        | Правовая информация
+                li.menu__element
+                    ul.menu__socials.socials
+                        each index in socials
+                            li.socials__element
+                                a.socials__link(href="#")                    
+                li.menu__element
+                    a.menu__link(href="#")
+                        | Вход
+                li.menu__element
+                    a.menu__link.menu__button.button.button--gold(href="#")
+                        | Полный доступ
+                li.menu__element
+                    .menu__link.menu__language-wrapper
+                        a.menu__language.menu__language--ru.menu__language--current(href="#")
+                            | Рус
+                        a.menu__language.menu__language--en(href="#")
+                            | Eng      
+            a.menu__button.button.button--gold.button--access(href="#")
+                | Полный доступ   
+            a.menu__button.button.button--gold.button--side(href="#")
+                | Программа
+            
+    .header__wrapper.header__wrapper--right
+        img.header__partner(src="images/logo-gazprombank.svg" width="153" height="45" alt="Генеральный партнёр Газпромбанк")
+        a(href="#").header__user
+            img(src="images/user.svg" width="20" height="23" alt="")

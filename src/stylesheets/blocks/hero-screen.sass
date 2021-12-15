@@ -1,0 +1,41 @@
+.hero-screen
+  font-family: $dinpro
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-content: center
+    width: 100%
+  &__info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-left: 15px
+    font-size: 24px
+    line-height: 1.25
+    font-weight: 400
+    text-align: right    
+    text-transform: uppercase
+    color: $white
+    white-space: nowrap
+    @media (max-width: 640px)
+      font-size: 18px
+    @media (max-width: 480px)
+      display: none
+  &__online
+    position: relative
+    padding-left: 30px
+  &__online:before
+    content: ''
+    position: absolute
+    top: 6px
+    left: 5px
+    width: 19px
+    height: 19px
+    background-color: $gold
+    border-radius: 50%
+    @media (max-width: 640px)
+      width: 15px
+      height: 15px
+      top: 4px
+      left: 10px

@@ -1,0 +1,18 @@
+doctype html
+html.page(lang="ru")
+    include includes/head.pug
+    body.page__body.body
+        include includes/overlay.pug
+        include includes/header.pug
+        main.main
+            .kontainer
+                h1.main__h1
+                    | Программа           
+            .kontainer.kontainer--wide.program
+                include includes/filters.pug
+                include includes/channels.pug
+                include includes/schedule.pug
+        include includes/footer.pug
+
+    include includes/scripts.pug
+    include includes/scripts--program.pug

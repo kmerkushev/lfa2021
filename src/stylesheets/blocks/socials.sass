@@ -1,0 +1,54 @@
+.socials
+  font-family: $dinpro
+  display: flex
+  &__element
+    margin-right: 18px
+  &__element:nth-of-type(1) &__link
+    background-image: url('images/socials-facebook.svg')
+    &:hover
+      background-image: url('images/socials-facebook--hover.svg')
+  &__element:nth-of-type(2) &__link
+    background-image: url('images/socials-telegram.svg')
+    background-position-x: 4px
+    background-position-y: 6px
+    &:hover
+      background-image: url('images/socials-telegram--hover.svg')
+  &__element:nth-of-type(3) &__link
+    background-image: url('images/socials-instagram.svg')
+    background-position-x: 4px
+    background-position-y: 4px
+    &:hover
+      background-image: url('images/socials-instagram--hover.svg')
+  &__element:nth-of-type(4) &__link
+    background-image: url('images/socials-youtube.svg')
+    background-position-x: 5px
+    background-position-y: 3px  
+    &:hover
+      background-image: url('images/socials-youtube--hover.svg')
+  &__element:nth-of-type(5) &__link
+    background-image: url('images/socials-twitter.svg')
+    &:hover
+      background-image: url('images/socials-twitter--hover.svg')
+  &__link
+    transition: all 0.3s ease-out
+    background-color: $gold
+    border: 1px solid $gold
+    width: 26px
+    height: 26px
+    display: block
+    background-repeat: no-repeat
+    background-position: center
+    border-radius: 50%
+    &:hover
+      background-color: $gray 
+      border: 1px solid $gold
+  &__element:last-of-type
+    margin-right: 0
+  &--vertical
+    flex-direction: column
+    justify-content: flex-start
+    & .socials__element
+      margin-right: 0
+      margin-bottom: 16px
+    & .socials__element:last-of-type
+      margin-bottom: 0

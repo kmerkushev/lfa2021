@@ -1,0 +1,22 @@
+- var navLinks = ['Вход', 'Расписание', 'Спикеры', 'FAQ', 'Партнеры', 'Правовая информация'];
+- var socials = ['facebook', 'telegram', 'instagram', 'youtube', 'twitter'];
+- var numberSocials = 5;
+footer.page__footer.footer
+    .footer__kontainer.kontainer.kontainer--wide
+        .footer__left
+            img.footer__logo(src="images/h1.svg" width="274" alt="Legal Forum 9¾")
+            p.footer__text
+                | ©&nbsp;ООО&nbsp;«КЦ&nbsp;«ПМЮФ» 2011–2021.<br>
+                | Любое использование материалов сайта допускается только с&nbsp;согласия ООО&nbsp;«КЦ&nbsp;«ПМЮФ»<br><br>
+                | Сетевое издание Дайджест Петербургского Международного Юридического Форума/St.&nbsp;Petersburg International Legal Forum Digest зарегистрировано Федеральной службой по&nbsp;надзору в&nbsp;сфере связи, информационных технологий и&nbsp;массовых коммуникаций (Роскомнадзор) за&nbsp;регистрационным номером: Эл №&nbsp;ФС77-58232.<br>
+                | Учредитель: ООО&nbsp;«КЦ&nbsp;«ПМЮФ». Главный редактор: Мотенко&nbsp;О.&nbsp;Б. Редакция: <a href="tel:+78124493621">+7&nbsp;(812)&nbsp;449-36-21</a>, <a href="mailto:pr@spblegalforum.com">pr@spblegalforum.com</a>
+                | Сетевое издание может содержать материалы 18+.
+        .footer__right
+            ul.footer__nav
+                each val in navLinks
+                    li.footer__element
+                        a.footer__link(href="#")= val
+            ul.footer__socials.socials.socials--vertical
+                each index in socials
+                    li.socials__element
+                        a.socials__link(href="#")

@@ -1,0 +1,113 @@
+.speakers   
+    font-family: $dinpro
+    position: relative
+    padding: 74px 20px
+    background-color: $gray--darken
+    @media screen and (max-width: 480px)
+        padding-bottom: 50px
+    &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__heading
+        font-size: 48px
+        line-height: 1.25
+        font-weight: 700
+        color: $white
+        text-align: center
+        text-transform: uppercase
+        margin-bottom: 10px
+        order: 0
+        @media screen and (max-width: 960px)
+            margin-bottom: 40px
+        @media screen and (max-width: 480px)
+            font-size: 36px
+    &__arrows
+        order: 0
+        @media screen and (max-width: 480px)
+            order: 1
+    &__speakers-container
+        order: 0
+    &__speaker-container
+        max-width: 157px
+        width: 100%
+        box-sizing: border-box
+        padding: 0 5px 15px 5px
+        &:hover
+            background: linear-gradient(180deg, rgba(161, 218, 248, 0.21) 0.09%, rgba(64, 73, 89, 0) 99.9%)
+    &__speaker
+        flex-direction: column
+        display: flex!important
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        &:hover
+            text-decoration: none
+            & .speakers__speaker-container
+                background: linear-gradient(180deg, rgba(161, 218, 248, 0.21) 0.09%, rgba(64, 73, 89, 0) 99.9%)
+
+    &__speaker:nth-of-type(2n)
+        margin-top: 78px
+        @media screen and (max-width: 480px)
+            margin-top: 0
+    &__photo
+    &__name
+        margin-top: 15px
+        font-size: 16px
+        line-height: 1.25
+        font-weight: 500
+        color: $white
+        text-align: center
+    &__description
+        margin-top: 10px
+        font-size: 12px
+        line-height: 1.25
+        font-weight: 400
+        color: $white
+        text-align: center
+    &__show-more-button
+        display: inline-flex
+        text-transform: initial
+        align-self: center
+        height: 46px
+        margin-top: 65px
+        order: 2
+        @media screen and (max-width: 480px)
+            margin-top: 30px
+
+
+
+    & .slick-dots li button
+        padding: 0!important
+        box-sizing: border-box!important
+    & .slick-dots li button:before
+        content: ''!important
+        background-color: $blue
+        height: 2px!important
+        top: 9px!important
+
+    & .slick-dots li.slick-active button:before
+        background-color: $gold!important
+        opacity: 1!important
+
+    & .slick-dots li,
+    & .slick-dots li button,
+    & .slick-dots li button:before,
+        width: 100%!important
+        flex-shrink: 9
+        transition: all 0.3s ease-out
+
+    & li.slick-active,
+    & li.slick-active button,
+    & li.slick-active button:before
+        width: 100%!important
+        flex-shrink: 7
+        max-width: 100%!important
+        transition: all 0.3s ease-out
+
+    & .slick-dots
+        display: flex!important
+        bottom: -65px!important
+        transition: all 0.3s ease-out
+        @media screen and (max-width: 480px)
+            bottom: -40px !important

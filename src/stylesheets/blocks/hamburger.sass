@@ -1,0 +1,29 @@
+.hamburger
+  width: 24px
+  height: 23px
+  border: none
+  background: none
+  background-image: url('images/hamburger--open.svg')
+  background-repeat: no-repeat
+  &:hover
+    cursor: pointer
+    opacity: 0.8
+  &__line
+    fill: $gold
+  &--close
+    position: fixed
+    background-image: url('images/hamburger--close.svg')
+  &--close &__line:nth-child(1)
+    transform: rotate(45deg)
+    x: 5
+    y: -1
+    width: 23px
+    height: 3px
+  &--close &__line:nth-child(3)
+    transform: rotate(-45deg)
+    x: -12
+    y: 15
+    width: 23px
+    height: 3px
+  &--close &__line:nth-child(2)
+    opacity: 0

@@ -1,0 +1,68 @@
+.button
+  width: 170px
+  height: 36px
+  font-family: $dinpro
+  font-size: 16px
+  line-height: 0
+  font-weight: 500
+  display: flex
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+  transition: background-color 0.3s ease-out
+  text-decoration: none
+  &--gold
+    background-color: $gold
+    color: $white
+    border: 1px solid $gold
+    &:hover
+      background-color: transparent
+      color: $gold
+      border: 1px solid $gold
+      text-decoration: none
+  &--side
+    position: fixed
+    bottom: calc(50% - 25px)
+    right: -57px
+    transform: rotate(-90deg)
+    background-color: $gold
+    color: $white
+    width: 160px
+    height: 46px
+    font-size: 16px
+    font-weight: 400
+    &:hover
+      background-color: $gray
+    @media screen and (max-width: 960px)
+      transform: none
+      bottom: 0
+      left: 30px
+      height: 37px
+      font-size: 14px
+    @media screen and (max-width: 768px)
+      width: 47%
+      left: 0
+    @media screen and (max-width: 480px)
+      left: 0
+      max-width: auto
+      width: 47%
+  &--access
+    display: none
+    width: 160px
+    font-size: 14px
+    font-weight: 400
+    height: 37px
+    &:hover
+      background-color: $gray
+    @media screen and (max-width: 960px)
+      display: flex
+      position: fixed
+      bottom: 0
+      right: 30px
+    @media screen and (max-width: 768px)
+      width: 47%
+      right: 0
+    @media screen and (max-width: 480px)
+      right: 0
+      max-width: auto
+      width: 47%

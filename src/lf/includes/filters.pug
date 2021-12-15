@@ -1,0 +1,36 @@
+- var tracks = ["Пленарное заседание", "Smart-общество", "Юридическая профессия", "ESG. Инвестиции", "Медицина. Фармацевтика", "Разрешение споров. Судебная и арбитражная практика. Уголовное право", "Международное право. Международное правосудие", "Публичное право. Конституционное право", "Культура и искусство. Образование. Спорт", "Частное право", "Банкротство", "Антимонопольное, налоговое и таможенное регулирование"];
+- var dates = ["18", "19", "20", "21", "22"];
+section.main__filters.filters
+    form.filters__form(action="https://echo.htmlacademy.ru/courses" method="post")
+        fieldset.filters__tracks-wrapper
+            button.filters__tracks-show-button(type="button")
+                | Выбрать треки
+            ul.filters__tracks.visually-hidden
+                each val, index in tracks
+                    li.filters__tracks-wrapper                                
+                        label.filters__tracks-label
+                            input.filters__track(type="checkbox" name="filters__track" value=index)
+                            span.filters__track-box
+                            span.filters__track-text
+                                | #{val}
+        label.filters__free-label
+            input.filters__free(type="checkbox" name="filters__free" value="true")
+            span.filters__free-box
+            span.filters__free-text
+                | Только бесплатные
+        fieldset.filters__dates-wrapper
+            ul.filters__dates
+                each val, index in dates
+                    li.filters__date-wrapper        
+                        label.filters__date-label
+                            if index==0
+                                input.filters__date(type="radio" name="filters__date" value=index checked)
+                            else 
+                                input.filters__date(type="radio" name="filters__date" value=index)
+                            span.filters__date-text
+                                span.filters__date-text-big                                
+                                    | #{val}
+                                    span.filters__date-text-big-space 
+                                        | &nbsp;
+                                | мая
+    

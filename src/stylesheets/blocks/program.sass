@@ -1,0 +1,41 @@
+.program
+    position: relative
+    font-family: $dinpro
+    background-color: $gray
+    padding-top: 55px
+    padding-bottom: 60px
+    @media screen and (max-width: 760px)
+        padding-top: 22px
+    & .schedule
+        max-height: 700px
+        overflow: auto
+        margin-top: 0        
+        &::-webkit-scrollbar  /* 1 - скроллбар */
+            width: 4px
+            height: 4px
+            background-color: $gray  
+        &::-webkit-scrollbar-button  /* 2 - кнопка */
+        &::-webkit-scrollbar-track  /* 3 - трек */
+            background-color: $background-gray
+        &::-webkit-scrollbar-track-piece  /* 4 - видимая часть трека */
+        &::-webkit-scrollbar-thumb  /* 5 - ползунок */
+            border-radius: 2px
+            background-color: $gold
+            opacity: 0.5
+        &::-webkit-scrollbar-corner  /* 6 - уголок */
+        &::-webkit-resizer  /* 7 - изменение размеров */
+        @media screen and (max-width: 480px)
+            padding-top: 0
+    
+    & .schedule__timeline-wrapper
+        max-height: initial
+        overflow: initial
+        @media screen and (max-width: 480px)
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+            &:first-of-type
+                margin-top: 50px
+
+    & .hour__event:first-of-type
+        margin-top: 50px
